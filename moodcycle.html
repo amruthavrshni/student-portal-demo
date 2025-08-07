@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Lifecycle 🚀</title>
+  <style>
+    :root {
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --text: #2c3e50;
+      --accent: #00b894;
+      --arrow: #636e72;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    .diagram {
+      display: grid;
+      grid-template-columns: repeat(4, 160px);
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .step {
+      background: var(--card);
+      border: 2px solid var(--accent);
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .step::after {
+      content: '➡';
+      position: absolute;
+      top: 50%;
+      right: -30px;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: var(--arrow);
+    }
+
+    .step:last-child::after {
+      content: '';
+    }
+
+    .label {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .loop {
+      margin-top: 4rem;
+      border: 2px dashed var(--accent);
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .diagram {
+        grid-template-columns: repeat(2, 160px);
+      }
+
+      .step::after {
+        content: '';
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🔁 DevOps Lifecycle</h1>
+
+  <div class="diagram">
+    <div class="step">
+      <div class="label">Plan</div>
+      <div class="desc">Define goals and backlog</div>
+    </div>
+    <div class="step">
+      <div class="label">Develop</div>
+      <div class="desc">Write and version code</div>
+    </div>
+    <div class="step">
+      <div class="label">Build</div>
+      <div class="desc">Compile and create builds</div>
+    </div>
+    <div class="step">
+      <div class="label">Test</div>
+      <div class="desc">Automated & manual testing</div>
+    </div>
+    <div class="step">
+      <div class="label">Release</div>
+      <div class="desc">Prepare for deployment</div>
+    </div>
+    <div class="step">
+      <div class="label">Deploy</div>
+      <div class="desc">Push to production</div>
+    </div>
+    <div class="step">
+      <div class="label">Operate</div>
+      <div class="desc">Manage app runtime</div>
+    </div>
+    <div class="step">
+      <div class="label">Monitor</div>
+      <div class="desc">Track performance & errors</div>
+    </div>
+  </div>
+
+  <div class="loop">
+  <div class="loop-text">
+    <span>🔁</span><br />
+    <strong>Continuous</strong><br />
+    <strong>Feedback</strong>
+  </div>
+</div>
+
+</body>
+</html>
